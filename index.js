@@ -1,3 +1,25 @@
+const server = require('./server')
+
+server.listen(5000, () => {
+    console.log ('Server running on port 5000')
+})
+
+module.exports = server;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 play this: https://www.youtube.com/watch?v=d-diB65scQU
 
@@ -12,3 +34,5 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Go code!
 */
+
+
