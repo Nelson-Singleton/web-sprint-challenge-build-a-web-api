@@ -1,3 +1,49 @@
+const express = require('express')
+//const router = ('')
+const server = express()
+server.use(express.json())
+
+const projectsRouter = require('./projectsRouter')
+const actionsRouter = require('./actionsRouter')
+
+//actions
+server.use('/api/projects', projectsRouter)
+server.use('/api/actions', actionsRouter)
+
+server.get('/', (req, res) => {
+    res.send('Working')
+})
+
+
+
+
+
+
+
+
+
+
+
+server.listen(5000, () => {
+    console.log ('Server running on port 5000')
+})
+
+module.exports = server;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 play this: https://www.youtube.com/watch?v=d-diB65scQU
 
@@ -12,3 +58,5 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Go code!
 */
+
+
