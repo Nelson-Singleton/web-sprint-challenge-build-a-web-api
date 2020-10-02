@@ -1,4 +1,28 @@
-const server = require('./server')
+const express = require('express')
+//const router = ('')
+const server = express()
+server.use(express.json())
+
+const projectsRouter = require('./projectsRouter')
+const actionsRouter = require('./actionsRouter')
+
+//actions
+server.use('/api/projects', projectsRouter)
+server.use('/api/actions', actionsRouter)
+
+server.get('/', (req, res) => {
+    res.send('Working')
+})
+
+
+
+
+
+
+
+
+
+
 
 server.listen(5000, () => {
     console.log ('Server running on port 5000')
